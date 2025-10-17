@@ -2,9 +2,17 @@
 
 /* Set custom variables here */
 
+:root{
+  --bs-primary: #2e483a;
+  --bs-primary-rgb: 46, 72, 58; /* keep in sync */
+}
 
 
-
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #2e483a;
+  --bs-btn-border-color: #2e483a;
+}
 
 .navbar-brand {
   color: #F6F3ED;
@@ -18,10 +26,10 @@ h1, h2, h3 {
   font-family: "Merriweather", serif;
 }
 
-#hero {
+.hero {
   height: 800px;
   background-color: #E4E6DB;
-  background-image: url(../images/hero-bg-img.png);
+  background-image: url(images/hero-bg-img.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
