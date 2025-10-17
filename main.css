@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sarala:wght@400;700&display=swap');
 
-/* Set custom variables here */
 
 :root {
   --bs-body-bg: #f6f3ed;
@@ -10,54 +9,80 @@
 }
 
 
-.btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #2e483a;
-  --bs-btn-border-color: #2e483a;
-}
-
-.navbar-brand {
-  color: #F6F3ED;
-}
-
 body {
   font-family: "Sarala", sans-serif;
+  background-color: var(--bs-body-bg);
 }
 
 h1, h2, h3 {
   font-family: "Merriweather", serif;
 }
 
+
+.navbar-brand {
+  color: var(--bs-light);
+}
+
+.navbar-brand:hover {
+  color: var(--bs-light);
+}
+
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #375d4a;
+  --bs-btn-hover-border-color: #375d4a;
+  --bs-btn-active-bg: #375d4a;
+  --bs-btn-active-border-color: #375d4a;
+}
+
+.btn-light {
+  color: var(--bs-primary);
+  font-weight: 500;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+}
+
 .hero {
   height: 800px;
   background-color: #E4E6DB;
-  background-image: url(images/hero-bg-img.png);
+  background-image: url('../images/hero-bg-img.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-#hero .d-flex {
-  height: 800px;
-}
 
 #cta {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cta-bg.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../images/cta-bg.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  color: var(--bs-light);
 }
 
 #cta .d-flex {
   height: 400px;
+  text-align: center;
 }
 
-section:not(#hero):not(#cta){
+
+section:not(.hero):not(#cta) {
   padding: 60px 0;
 }
 
-@media(min-width: 993px){
-  section:not(#hero):not(#cta){
+@media (min-width: 993px) {
+  section:not(.hero):not(#cta) {
     padding: 100px 0;
   }
 }
